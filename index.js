@@ -26,14 +26,16 @@ let str = "LaunchCode";
 let indexStart = input.question("Enter how many characters to change:");
 indexStart = Number(indexStart);
 
+let errorMessage = "";
 if (indexStart > str.length) {
   indexStart = 3;
+  errorMessage = "ERROR!";
 }
 
 let newString = str.slice(0,indexStart);
 let otherStr = str.slice(indexStart, str.length);
 
-let myNewStr = `Pig Latin: ${otherStr}${newString}`;
+let myNewStr = `Pig Latin: ${otherStr}${newString}${errorMessage}`;
 console.log(myNewStr);
 
 
